@@ -1,0 +1,58 @@
+providers:
+    spend:
+        provider: SpendingTracker
+        month: January 2013
+layout: default.twig
+---
+<div class="content">
+    <div class="page-header">
+        <h1>{{ this.providers.spend.getReportDate().format('F Y') }}</h1>
+    </div>
+    <div class="row">
+        <div class="span10">
+            <div class="clearfix" style="height:50px;"></div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                    Category 
+                    </th>
+                    <th>
+                    Cost    
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for result in this.providers.spend.getSummary() %}
+                <tr>
+                    <td>
+                        {{result.act_category}}
+                    </td>
+                    <td>
+                        ${{ result.total_cost|number_format(2,'.',',')}} 
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <span class="text-success">
+                                Total Spent
+                            </span>
+                        </td>
+                        <td>
+                            <span class="text-success">
+                                ${{ this.providers.spend.getSpendingTotal()|number_format(2,'.',',') }}
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

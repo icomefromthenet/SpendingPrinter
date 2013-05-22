@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SpendingPrinter!</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap-responsive.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="styles/default.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap-responsive.css" media="print">
+            <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" media="print">
+        
+
+        <!-- scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/default.js"></script>
+        <script>
+            $(document).ready(function () {
+              
+              
+            });
+        </script>
+    </head>
+    <body>
+        {% include 'layouts/topbar.twig'%}
+        <div class="container">
+            {{ content }}
+            {% include 'layouts/footer.twig'%}
+        </div>
+    </body>
+</html>
+

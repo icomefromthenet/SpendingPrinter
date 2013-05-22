@@ -1,0 +1,23 @@
+{
+    "name": "lewis/spending-printer",
+    "description": "simple printer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lewis Dyer",
+            "email": "getintouch@icomefromthenet.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "SpendingPrinter": "src"
+        }
+    },
+    "require": {
+        "doctrine/dbal" : "2.3.*",
+        "pimple/pimple" : "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
